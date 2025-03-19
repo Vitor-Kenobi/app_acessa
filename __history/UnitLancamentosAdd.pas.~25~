@@ -1,0 +1,78 @@
+unit UnitLancamentosAdd;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.Edit,
+  FMX.DateTimeCtrls, FMX.ListBox{$IFDEF ANDROID}
+  ,FMX.Helpers.Android,
+  Androidapi.Helpers
+  {$ENDIF};
+
+type
+  TFrmLancamentosAdd = class(TForm)
+    Layout1: TLayout;
+    Label1: TLabel;
+    img_voltar: TImage;
+    layout_descricao: TLayout;
+    lbl_descricao: TLabel;
+    edt_descricao: TEdit;
+    Line1: TLine;
+    layout_categoria: TLayout;
+    lbl_categoria: TLabel;
+    edt_categoria: TEdit;
+    Line2: TLine;
+    layout_data: TLayout;
+    lbl_data_lancamento: TLabel;
+    Line3: TLine;
+    dt_lancamento: TDateEdit;
+    Rectangle1: TRectangle;
+    img_salvar_materia: TImage;
+    img_delete: TImage;
+    img_limpar: TImage;
+    layout_delete: TLayout;
+    layout_limpar: TLayout;
+    layout_salvar: TLayout;
+    lbl_delete: TLabel;
+    lbl_salvar: TLabel;
+    Label2: TLabel;
+    Layout2: TLayout;
+    lb_icones: TListBox;
+    lbl_icone: TLabel;
+    ListBoxItem1: TListBoxItem;
+    Image1: TImage;
+    ListBoxItem2: TListBoxItem;
+    ListBoxItem3: TListBoxItem;
+    ListBoxItem4: TListBoxItem;
+    procedure img_voltarClick(Sender: TObject);
+    procedure img_limparClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmLancamentosAdd: TFrmLancamentosAdd;
+
+implementation
+
+{$R *.fmx}
+
+uses UnitPrincipal;
+
+procedure TFrmLancamentosAdd.img_limparClick(Sender: TObject);
+begin
+    edt_descricao.Text := '';
+    edt_categoria.Text:= '';
+    dt_lancamento.Text := DateToStr(Date);
+end;
+
+procedure TFrmLancamentosAdd.img_voltarClick(Sender: TObject);
+begin
+    FrmLancamentosAdd.Close;
+end;
+
+end.

@@ -1,0 +1,79 @@
+object FrmDespertador: TFrmDespertador
+  Left = 0
+  Top = 0
+  Caption = 'Despertador'
+  ClientHeight = 474
+  ClientWidth = 341
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Label1: TLabel
+    Position.X = 96.000000000000000000
+    Position.Y = 65.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 15.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Label1'
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Hora'
+    TabOrder = 2
+  end
+  object Label3: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Status'
+    TabOrder = 1
+  end
+  object Label4: TLabel
+    Position.X = 88.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Desativado'
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Position.X = 88.000000000000000000
+    Position.Y = 88.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 40.000000000000000000
+    Position.Y = 200.000000000000000000
+    TabOrder = 6
+    Text = 'Ativar'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Position.X = 152.000000000000000000
+    Position.Y = 176.000000000000000000
+    TabOrder = 5
+    Text = 'Desativar'
+    OnClick = Button2Click
+  end
+  object Timer1: TTimer
+    Interval = 1
+    OnTimer = Timer1Timer
+    Left = 80
+    Top = 248
+  end
+  object Timer2: TTimer
+    Enabled = False
+    OnTimer = Timer2Timer
+    Left = 144
+    Top = 272
+  end
+end

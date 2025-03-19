@@ -1,0 +1,32 @@
+unit UnitPerfil;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs;
+
+type
+  TFrmPerfil = class(TForm)
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPerfil: TFrmPerfil;
+
+implementation
+
+{$R *.fmx}
+
+uses UnitPrincipal;
+
+procedure TFrmPerfil.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+    FrmPrincipal.FullScreen := true;
+end;
+
+end.

@@ -1,0 +1,49 @@
+unit UnitPerfil;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TFrmPerfil = class(TForm)
+    Layout1: TLayout;
+    Label1: TLabel;
+    img_voltar: TImage;
+    Layout9: TLayout;
+    circ_perfil: TCircle;
+    lbl_função: TLabel;
+    lbl_nome_menu: TLabel;
+    rect_sair: TRectangle;
+    Label11: TLabel;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure img_voltarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPerfil: TFrmPerfil;
+
+implementation
+
+{$R *.fmx}
+
+uses UnitPrincipal;
+
+procedure TFrmPerfil.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+    FrmPrincipal.FullScreen := true;
+end;
+
+procedure TFrmPerfil.img_voltarClick(Sender: TObject);
+begin
+    FrmPerfil.Close;
+    FrmPrincipal.FullScreen := True;
+end;
+
+end.

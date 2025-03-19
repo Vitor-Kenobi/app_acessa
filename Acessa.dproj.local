@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/09/15 14:31:27.000.266,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/03/20 19:34:45.000.065,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/06/23 00:14:20.000.496,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/01/25 21:27:09.000.193,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/01/29 19:10:21.000.582,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/05/10 18:28:07.000.409,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/08/16 13:51:06.000.870,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/12/12 00:17:31.000.142,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/05/21 13:54:42.000.810,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/29 19:30:08.000.814,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/29 20:05:56.000.583,=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/29 20:08:23.000.640,D:\99Coders\Curso99Money2\Aula 05\Fontes\UnitLogin.pas=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/29 20:08:23.000.640,D:\99Coders\Curso99Money2\Aula 05\Fontes\UnitLogin.fmx=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2020/06/29 20:08:31.000.856,D:\99Coders\Curso99Money2\Aula 05\Fontes\Money.dproj=C:\Users\Heber\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/07/06 20:30:58.000.797,=D:\99Coders\Curso99Money2\Fontes\Units\u99Permissions.pas</Transaction>
+    <Transaction>2020/07/13 20:25:33.000.499,=D:\99Coders\Curso99Money2\Fontes\Unit1.pas</Transaction>
+    <Transaction>2020/07/13 20:26:51.000.534,D:\99Coders\Curso99Money2\Fontes\UnitPrincipal.fmx=D:\99Coders\Curso99Money2\Fontes\Unit1.fmx</Transaction>
+    <Transaction>2020/07/13 20:26:51.000.533,D:\99Coders\Curso99Money2\Fontes\UnitPrincipal.pas=D:\99Coders\Curso99Money2\Fontes\Unit1.pas</Transaction>
+    <Transaction>2020/10/28 16:03:15.000.719,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 13:24:40.000.613,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/03 16:34:36.000.111,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/03 16:35:57.000.528,C:\Projeto TCC App\Unit1.dfm=C:\Projeto TCC App\UDataModule.dfm</Transaction>
+    <Transaction>2020/11/03 16:35:57.000.528,C:\Projeto TCC App\Unit1.pas=C:\Projeto TCC App\UDataModule.pas</Transaction>
+    <Transaction>2020/11/03 17:23:10.000.145,C:\Projeto TCC App\UDataModule.pas=</Transaction>
+    <Transaction>2020/11/03 17:24:50.000.625,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/03 17:25:18.000.764,C:\Projeto TCC App\Unit1.pas=C:\Projeto TCC App\UnitDM.pas</Transaction>
+    <Transaction>2020/11/03 17:25:18.000.764,C:\Projeto TCC App\Unit1.dfm=C:\Projeto TCC App\UnitDM.dfm</Transaction>
+    <Transaction>2020/11/03 17:35:57.000.072,C:\Projeto TCC App\UnitDM.pas=</Transaction>
+    <Transaction>2020/11/03 17:36:35.000.780,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/03 17:37:52.000.541,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/03 17:43:58.000.722,C:\Projeto TCC App\Unit1.dfm=C:\Projeto TCC App\UnitDM.dfm</Transaction>
+    <Transaction>2020/11/03 17:43:58.000.722,C:\Projeto TCC App\Unit1.pas=C:\Projeto TCC App\UnitDM.pas</Transaction>
+    <Transaction>2020/11/09 16:59:49.000.943,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/09 17:00:30.000.116,C:\Projeto TCC App\UnitLancamentos.pas=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/09 17:00:30.000.148,C:\Projeto TCC App\UnitLancamentos.fmx=C:\Projeto TCC App\Unit1.fmx</Transaction>
+    <Transaction>2020/11/24 17:39:48.000.352,=C:\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2020/11/24 17:40:31.000.837,C:\Projeto TCC App\Unit1.fmx=C:\Projeto TCC App\UnitDespertador.fmx</Transaction>
+    <Transaction>2020/11/24 17:40:31.000.837,C:\Projeto TCC App\Unit1.pas=C:\Projeto TCC App\UnitDespertador.pas</Transaction>
+    <Transaction>2021/03/10 19:37:56.000.392,C:\Vitor\Pessoal\Curso\Projeto TCC App\UnitDespertador.pas=</Transaction>
+    <Transaction>2021/04/09 19:23:24.000.959,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/09 19:23:50.000.683,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitLancamentosAdd.fmx=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.fmx</Transaction>
+    <Transaction>2021/04/09 19:23:50.000.683,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitLancamentosAdd.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/20 21:30:58.000.457,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/22 16:37:26.000.565,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/22 16:37:55.000.611,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitCheckList.pas</Transaction>
+    <Transaction>2021/04/22 16:37:55.000.611,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.fmx=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitCheckList.fmx</Transaction>
+    <Transaction>2021/04/23 09:44:47.000.745,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/23 09:45:25.000.354,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitCheckListAdd.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/23 09:45:25.000.354,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitCheckListAdd.fmx=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.fmx</Transaction>
+    <Transaction>2021/04/26 06:59:05.000.716,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/26 06:59:34.000.452,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitNotificador.pas</Transaction>
+    <Transaction>2021/04/26 06:59:34.000.452,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.fmx=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitNotificador.fmx</Transaction>
+    <Transaction>2021/04/27 19:43:43.000.190,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/27 19:45:47.000.956,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitDesempenho.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/27 19:45:47.000.956,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitDesempenho.fmx=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.fmx</Transaction>
+    <Transaction>2021/04/27 21:47:01.000.495,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/27 21:48:25.000.907,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Lancamento.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/27 21:52:46.000.553,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/27 21:53:07.000.509,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Classes\Lancamento.pas</Transaction>
+    <Transaction>2021/04/27 22:25:52.000.185,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Money.dproj=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Acessa.dproj</Transaction>
+    <Transaction>2021/04/27 22:27:40.000.452,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Classes\Lancamento.pas=</Transaction>
+    <Transaction>2021/04/27 22:28:01.000.104,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/27 22:28:21.000.281,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Classes\Lancamentos.pas</Transaction>
+    <Transaction>2021/04/27 22:45:47.000.017,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/28 00:01:02.000.163,=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/04/28 00:01:26.000.633,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitPerfil.fmx=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.fmx</Transaction>
+    <Transaction>2021/04/28 00:01:26.000.633,D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\UnitPerfil.pas=D:\Vitor - Particular\Vitor\Pessoal\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/05/17 18:20:47.031,=C:\Users\MT-G450\OneDrive\Documentos\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+    <Transaction>2021/05/17 18:21:19.853,C:\Users\MT-G450\OneDrive\Documentos\Docs Curso\TCC\Projeto TCC App\UnitPerfilEditar.fmx=C:\Users\MT-G450\OneDrive\Documentos\Docs Curso\TCC\Projeto TCC App\Unit1.fmx</Transaction>
+    <Transaction>2021/05/17 18:21:19.853,C:\Users\MT-G450\OneDrive\Documentos\Docs Curso\TCC\Projeto TCC App\UnitPerfilEditar.pas=C:\Users\MT-G450\OneDrive\Documentos\Docs Curso\TCC\Projeto TCC App\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="LGM250SOUO9H49Y95H" iOSSimulator="iPhone5" Android64="LGM250SOUO9H49Y95H"/>
+		<PMACANDREA iOSSimulator="iPhone5"/>
+		<PMacBook iOSSimulator="iPhone5"/>
+		<PMacVirtual iOSSimulator="iPhone5"/>
+		<PMacMini iOSSimulator="iPhone"/>
+	</ActiveMobileDevice>
+</BorlandProject>

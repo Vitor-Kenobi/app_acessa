@@ -1,0 +1,57 @@
+unit UnitCheckListAdd;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.Layouts, FMX.Edit;
+
+type
+  TFrmChecklistAdd = class(TForm)
+    Rectangle1: TRectangle;
+    layout_delete: TLayout;
+    img_delete: TImage;
+    lbl_delete: TLabel;
+    layout_limpar: TLayout;
+    img_limpar: TImage;
+    Label2: TLabel;
+    layout_salvar: TLayout;
+    img_salvar_tarefa: TImage;
+    lbl_salvar: TLabel;
+    Layout1: TLayout;
+    Label1: TLabel;
+    img_voltar: TImage;
+    layout_descricao: TLayout;
+    lbl_desc_tarefa: TLabel;
+    edt_desc_tarefa: TEdit;
+    Line1: TLine;
+    StyleBook1: TStyleBook;
+    layout_checkar: TLayout;
+    lbl_checkar: TLabel;
+    Layout2: TLayout;
+    img_check: TImage;
+    img_tarefa_true: TImage;
+    img_tarefa_false: TImage;
+    CheckBox1: TCheckBox;
+    lbl_dois_pts: TLabel;
+    procedure img_voltarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmChecklistAdd: TFrmChecklistAdd;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmChecklistAdd.img_voltarClick(Sender: TObject);
+begin
+    FrmChecklistAdd.Close;
+end;
+
+end.

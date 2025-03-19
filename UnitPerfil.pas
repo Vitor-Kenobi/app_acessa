@@ -1,0 +1,51 @@
+unit UnitPerfil;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TFrmPerfil = class(TForm)
+    Layout1: TLayout;
+    Label1: TLabel;
+    img_voltar: TImage;
+    Layout9: TLayout;
+    circ_perfil: TCircle;
+    lbl_função_perfil: TLabel;
+    lbl_nome_perfil: TLabel;
+    rect_sair: TRectangle;
+    Label11: TLabel;
+    Layout2: TLayout;
+    procedure img_voltarClick(Sender: TObject);
+    procedure circ_perfilClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPerfil: TFrmPerfil;
+
+implementation
+
+{$R *.fmx}
+
+uses UnitPrincipal, UnitPerfilEditar;
+
+procedure TFrmPerfil.circ_perfilClick(Sender: TObject);
+begin
+    if not Assigned(FrmPerfilEditar) then
+    Application.CreateForm(TFrmPerfilEditar, FrmPerfilEditar);
+    FrmPerfilEditar.Show;
+end;
+
+procedure TFrmPerfil.img_voltarClick(Sender: TObject);
+begin
+    FrmPerfil.Close;
+end;
+
+end.

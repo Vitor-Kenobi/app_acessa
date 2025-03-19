@@ -1,0 +1,348 @@
+unit UnitPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListView.Types,
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView, FMX.Ani
+  {$IFDEF ANDROID}
+  ,FMX.Helpers.Android,
+  Androidapi.Helpers
+  {$ENDIF};
+
+type
+  TFrmPrincipal = class(TForm)
+    Layout1: TLayout;
+    img_menu: TImage;
+    Label1: TLabel;
+    Layout2: TLayout;
+    Label2: TLabel;
+    Label3: TLabel;
+    Layout3: TLayout;
+    Layout4: TLayout;
+    Layout5: TLayout;
+    Image2: TImage;
+    Label4: TLabel;
+    Label5: TLabel;
+    Layout6: TLayout;
+    Image3: TImage;
+    Label6: TLabel;
+    Label7: TLabel;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    Layout7: TLayout;
+    Label8: TLabel;
+    lv_lancamento: TListView;
+    img_categoria: TImage;
+    add_materia: TRoundRect;
+    lbl_add_lancamento: TLabel;
+    layout_principal: TLayout;
+    rect_menu: TRectangle;
+    AnimationMenu: TFloatAnimation;
+    img_fechar_menu: TImage;
+    Layout8: TLayout;
+    lbl_titulo_menu: TLabel;
+    layout_menu_des: TLayout;
+    lbl_notifica: TLabel;
+    Layout9: TLayout;
+    circ_perfil: TCircle;
+    Image1: TImage;
+    lbl_nome_menu: TLabel;
+    lbl_função: TLabel;
+    rect_sair: TRectangle;
+    layout_perfil: TLayout;
+    Label11: TLabel;
+    Layout11: TLayout;
+    layout_menu: TLayout;
+    lbl_subir_lancamentos: TLabel;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    layout_menu_inferior: TLayout;
+    layout_menu_lancamentos: TLayout;
+    lbl_materias: TLabel;
+    Rectangle6: TRectangle;
+    Rectangle7: TRectangle;
+    layout_menu_tarefas: TLayout;
+    lbl_tarefas: TLabel;
+    Rectangle8: TRectangle;
+    Rectangle9: TRectangle;
+    layout_menu_fechar: TLayout;
+    lbl_fechar: TLabel;
+    Rectangle13: TRectangle;
+    Layout12: TLayout;
+    Layout13: TLayout;
+    Image4: TImage;
+    StyleBook1: TStyleBook;
+    layout_medias: TLayout;
+    lbl_medias: TLabel;
+    Rectangle10: TRectangle;
+    Rectangle11: TRectangle;
+    procedure FormShow(Sender: TObject);
+    procedure lv_lancamentoUpdateObjects(const Sender: TObject;
+      const AItem: TListViewItem);
+    procedure lv_lancamentoItemClick(const Sender: TObject;
+      const AItem: TListViewItem);
+    procedure FormCreate(Sender: TObject);
+    procedure AnimationMenuFinish(Sender: TObject);
+    procedure AnimationMenuProcess(Sender: TObject);
+    procedure Layout11Click(Sender: TObject);
+    procedure layout_menuClick(Sender: TObject);
+    procedure lbl_fecharClick(Sender: TObject);
+    procedure layout_menu_lancamentosClick(Sender: TObject);
+    procedure lbl_subir_lancamentosClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure lbl_add_lancamentoClick(Sender: TObject);
+    procedure layout_menu_desClick(Sender: TObject);
+    procedure layout_mediasClick(Sender: TObject);
+    procedure circ_perfilClick(Sender: TObject);
+    procedure rect_sairClick(Sender: TObject);
+    procedure layout_menu_tarefasClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+      procedure AddLancamento(listview:TListView; id_lancamento, materia, categoria: string; valor : string;
+      dt: TDateTime;
+      foto: TStream);
+      procedure SetUpMaterias(lv: TListView; Item: TlistViewItem);
+      procedure CorBarra();
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses UnitLancamentos, UnitLancamentosAdd, UnitCheckList, UnitNotificador,
+  UnitDesempenho, UnitPerfil, UnitLogin;
+
+// Unit de Funções públicas -----------------------------------------
+procedure TFrmPrincipal.AddLancamento(listview : TListView;
+                                      id_lancamento, materia,
+                                      categoria: string;
+                                      valor : string;
+                                      dt: TDateTime;
+                                      foto: TStream);
+var
+    txt : TListItemText;
+    img : TListItemImage;
+    bmp : TBitmap;
+begin
+    with listview.Items.Add do
+    begin
+        TagString := id_lancamento;
+
+        txt := TListItemText(Objects.FindDrawable('TxtMateria'));
+        txt.Text := materia;
+
+        TListItemText(Objects.FindDrawable('TxtCategoria')).Text := categoria;
+        TListItemText(Objects.FindDrawable('TxtValor')).Text := valor;
+        TListItemText(Objects.FindDrawable('TxtData')).Text := FormatDateTime('dd/mm', dt);
+
+        // Icone...
+        img := TListItemImage(Objects.FindDrawable('ImgIcone'));
+
+        if foto <> nil then
+        begin
+            bmp := TBitmap.Create;
+            bmp.LoadFromStream(foto);
+
+            img.OwnsBitmap := true;
+            img.Bitmap := bmp;
+        end;
+
+    end;
+end;
+
+procedure TFrmPrincipal.SetUpMaterias(lv: TListView; Item: TlistViewItem);
+var
+    txt : TListItemText;
+begin
+    txt := TListItemText(Item.Objects.FindDrawable('TxtMateria'));
+    txt.Width := lv.Width - txt.PlaceOffset.X - 80;
+
+    txt := TListItemText(Item.Objects.FindDrawable('TxtCategoria'));
+    txt.Width := lv.Width - txt.PlaceOffset.X - 60;
+end;
+
+procedure TFrmPrincipal.CorBarra();
+begin
+{$IFDEF IOS}
+    Form1.SystemStatusBar.BackgroundColor := '#FFFF3535';
+    Form1.SystemStatusBar.Visibility :=
+    TFormSystemStatusBar.TVisibilityMode.Visible;
+{$ENDIF}
+{$IFDEF ANDROID}
+  CallInUIThreadAndWaitFinishing(
+    procedure
+    begin
+      //TAndroidHelper.Activity.getWindow.setStatusBarColor('#FFFF3535');
+    end);
+{$ENDIF}
+end;
+//-------------------------------------------------------------------
+procedure TFrmPrincipal.AnimationMenuFinish(Sender: TObject);
+begin
+    layout_principal.Enabled := AnimationMenu.Inverse;
+    AnimationMenu.Inverse := NOT AnimationMenu.Inverse;
+end;
+
+procedure TFrmPrincipal.AnimationMenuProcess(Sender: TObject);
+begin
+    layout_principal.Margins.Right := -230 - rect_menu.Margins.Left;
+end;
+
+procedure TFrmPrincipal.circ_perfilClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+    if NOT Assigned(FrmPerfil) then
+        Application.CreateForm(TFrmPerfil, FrmPerfil);
+        FrmPerfil.Show;
+end;
+
+procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+      if Assigned(FrmLancamentos) then
+      begin
+        FrmLancamentos.DisposeOf;
+        FrmLancamentos := nil;
+      end;
+
+end;
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+    rect_menu.Margins.Left := -230;
+    rect_menu.Align := TAlignLayout.Left;
+    rect_menu.Visible := true;
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+var
+    foto : TStream;
+    x : integer;
+begin
+    foto := TMemoryStream.Create;
+    img_categoria.Bitmap.SaveToStream(foto);
+    foto.Position := 0;
+
+    for x := 1 to 13 do
+    begin
+      if x = 1 then
+      begin
+          AddLancamento(FrmPrincipal.lv_lancamento,'01', 'Biologia', 'Ciências Biológicas', '2', date, foto);
+      end;
+      if x = 2 then
+      begin
+         AddLancamento(FrmPrincipal.lv_lancamento,'02', 'História', 'Ciências Humanas', '1', date, foto);
+      end;
+      if x = 3 then
+      begin
+         AddLancamento(FrmPrincipal.lv_lancamento,'03', 'Português', 'Línguas', '1', date, foto);
+      end;
+      if x = 4 then
+      begin
+         AddLancamento(FrmPrincipal.lv_lancamento,'04', 'Matemática', 'Ciências Exatas', '1', date, foto);
+      end
+      else
+         AddLancamento(FrmPrincipal.lv_lancamento,'xx', 'Testeeee', 'Categoria teste', '1', date, foto);
+      end;
+
+    foto.DisposeOf;
+end;
+
+procedure TFrmPrincipal.Layout11Click(Sender: TObject);
+begin
+    AnimationMenu.Start;
+end;
+
+procedure TFrmPrincipal.layout_mediasClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+
+    if NOT Assigned(FrmDesempenho) then
+        Application.CreateForm(TFrmDesempenho, FrmDesempenho);
+        FrmDesempenho.Show;
+end;
+
+procedure TFrmPrincipal.layout_menuClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+end;
+
+procedure TFrmPrincipal.layout_menu_desClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+
+    if NOT Assigned(FrmNotificador) then
+        Application.CreateForm(TFrmNotificador, FrmNotificador);
+        FrmNotificador.Show;
+end;
+
+procedure TFrmPrincipal.layout_menu_lancamentosClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+
+    if NOT Assigned(FrmLancamentos) then
+        Application.CreateForm(TFrmLancamentos, FrmLancamentos);
+        FrmLancamentos.Show;
+end;
+
+procedure TFrmPrincipal.layout_menu_tarefasClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+
+    if NOT Assigned(FrmChecklist) then
+        Application.CreateForm(TFrmchecklist, FrmChecklist);
+        FrmChecklist.Show;
+end;
+
+procedure TFrmPrincipal.lbl_add_lancamentoClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+
+    if NOT Assigned(FrmLancamentosAdd) then
+      Application.CreateForm(TFrmLancamentosAdd, FrmLancamentosAdd);
+      FrmLancamentosAdd.Show;
+end;
+
+procedure TFrmPrincipal.lbl_fecharClick(Sender: TObject);
+begin
+    FrmPrincipal.Close;
+end;
+
+procedure TFrmPrincipal.lbl_subir_lancamentosClick(Sender: TObject);
+begin
+    AnimationMenu.Start;
+
+    if NOT Assigned(FrmLancamentos) then
+    Application.CreateForm(TFrmLancamentos, FrmLancamentos);
+    FrmLancamentos.Show;
+end;
+
+procedure TFrmPrincipal.lv_lancamentoItemClick(const Sender: TObject;
+  const AItem: TListViewItem);
+begin
+    showmessage(Aitem.TagString);
+end;
+
+procedure TFrmPrincipal.lv_lancamentoUpdateObjects(const Sender: TObject;
+  const AItem: TListViewItem);
+begin
+    SetUpMaterias(FrmPrincipal.lv_lancamento, AItem);
+end;
+
+procedure TFrmPrincipal.rect_sairClick(Sender: TObject);
+begin
+    if NOT Assigned(Frmlogin) then
+        Application.CreateForm(TFrmlogin, Frmlogin);
+        Frmlogin.Show;
+        Application.MainForm := FrmLogin;
+        FrmPrincipal.Close;
+end;
+
+end.

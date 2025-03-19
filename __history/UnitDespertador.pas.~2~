@@ -1,0 +1,66 @@
+unit UnitDespertador;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Edit, FMX.Controls.Presentation;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Timer1: TTimer;
+    Timer2: TTimer;
+    procedure Timer2Timer(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+    Label4.Text := 'Ativado';
+    Timer2.Enabled := True;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+    Label4.Text := 'Desativo';
+    Timer2.Enabled := False;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+    Label1.Text := TimeToStr(now);
+end;
+
+procedure TForm1.Timer2Timer(Sender: TObject);
+begin
+    if Edit1.Text <> '' then
+      begin
+        if Label1.Text > Edit1.Text then
+          begin
+            beep;
+          end;
+      end;
+end;
+
+end.

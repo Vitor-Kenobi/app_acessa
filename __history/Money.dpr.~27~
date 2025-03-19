@@ -1,0 +1,24 @@
+program Money;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  UnitLogin in 'UnitLogin.pas' {FrmLogin},
+  u99Permissions in 'Units\u99Permissions.pas',
+  UnitPrincipal in 'UnitPrincipal.pas' {FrmPrincipal},
+  UnitDM in 'UnitDM.pas' {dm: TDataModule},
+  UnitLancamentos in 'UnitLancamentos.pas' {FrmLancamentos},
+  UnitLancamentosAdd in 'UnitLancamentosAdd.pas' {FrmLancamentosAdd},
+  UnitCheckList in 'UnitCheckList.pas' {FrmChecklist},
+  UnitCheckListAdd in 'UnitCheckListAdd.pas' {FrmChecklistAdd};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tdm, dm);
+  Application.CreateForm(TFrmLogin, FrmLogin);
+  Application.CreateForm(TFrmChecklist, FrmChecklist);
+  Application.CreateForm(TFrmChecklistAdd, FrmChecklistAdd);
+  Application.Run;
+end.
